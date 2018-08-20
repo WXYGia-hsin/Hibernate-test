@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.wang.test.Teacher" table="teacher" schema="project1">
+        <id name="teacherId" column="teacher_ID"/>
+        <property name="teacherName" column="teacher_name"/>
+        <set name="student" table="course" schema="project1" >
+            <key>
+                <column name="teacher_ID"/>
+            </key>
+            <many-to-many not-found="ignore" class="com.wang.test.Student">
+                <column name="student_ID"/>
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/project1</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!--<property name="show_sql">true</property>-->
+    <property name="format_sql">true</property>
+    <!--<mapping class="com.wang.po.User"/>-->
+    <mapping class="com.wang.po.Wife"/>
+    <mapping class="com.wang.po.Husband"/>
+    <!--<mapping class="com.wang.po.Mother"/>-->
+    <!--<mapping class="com.wang.po.Children"/>-->
+    <mapping class="com.wang.po.Teacher"/>
+    <mapping class="com.wang.po.Student"/>
+    <mapping resource="com/wang/test/Children.hbm.xml"/>
+    <mapping resource="com/wang/test/Mother.hbm.xml"/>
+    <mapping resource="com/wang/test/Course.hbm.xml"/>
+    <mapping resource="com/wang/test/Student.hbm.xml"/>
+    <mapping resource="com/wang/test/Teacher.hbm.xml"/>
+    <mapping resource="com/wang/test/Husband.hbm.xml"/>
+    <mapping resource="com/wang/test/Wife.hbm.xml"/>
+    <mapping resource="com/wang/test/User.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
